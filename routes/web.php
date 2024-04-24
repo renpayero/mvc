@@ -1,13 +1,9 @@
 <?php
 
 use lib\Route;
+use App\Controllers\HomeController;
 
-Route::get('/', function(){
-    return [
-        'title' => 'Inicio',
-        'message' => 'Hola desde la pagina de inicio'
-    ];
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/contact', function(){
     return 'Hola desde la pagina de contacto';
